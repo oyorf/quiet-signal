@@ -6,6 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-0A0A0A.svg)](LICENSE)
 ![Skills](https://img.shields.io/badge/Skills-3-7C3AED.svg)
+[![Install with skills](https://img.shields.io/badge/install-npx%20skills%20add-7C3AED.svg)](https://skills.sh/docs/cli)
 
 </div>
 
@@ -25,17 +26,17 @@ Quiet Signal 用近白表面、清晰的黑灰层级、编辑性字体关系、�
 
 ## 安装
 
-### 安装全部 Skills
+需要本机已有 Node.js 与 npm。运行一条命令即可：
 
 ```bash
-git clone https://github.com/oyorf/quiet-signal.git
-mkdir -p ~/.codex/skills
-cp -R quiet-signal/skills/quiet-signal-design ~/.codex/skills/
-cp -R quiet-signal/skills/quiet-signal-xhs ~/.codex/skills/
-cp -R quiet-signal/skills/quiet-signal-reports ~/.codex/skills/
+npx skills add oyorf/quiet-signal
 ```
 
-重新启动 Codex 或重新加载 Skills。之后可以在对话中通过 `$quiet-signal-design`、`$quiet-signal-xhs` 或 `$quiet-signal-reports` 显式调用。
+[`skills` CLI](https://skills.sh/docs/cli) 会自动识别已经安装的 Agent，并让你选择目标 Agent、需要的 Skill 和安装范围。默认安装到当前项目；希望所有项目都能使用时，加上 `-g`：
+
+```bash
+npx skills add oyorf/quiet-signal -g
+```
 
 ### 只安装需要的 Skill
 
@@ -43,18 +44,40 @@ cp -R quiet-signal/skills/quiet-signal-reports ~/.codex/skills/
 
 ```bash
 # 只安装基座
-cp -R quiet-signal/skills/quiet-signal-design ~/.codex/skills/
+npx skills add oyorf/quiet-signal --skill quiet-signal-design
 
 # 安装小红书能力（基座 + 小红书）
-cp -R quiet-signal/skills/quiet-signal-design ~/.codex/skills/
-cp -R quiet-signal/skills/quiet-signal-xhs ~/.codex/skills/
+npx skills add oyorf/quiet-signal \
+  --skill quiet-signal-design \
+  --skill quiet-signal-xhs
 
 # 安装报告能力（基座 + 报告）
-cp -R quiet-signal/skills/quiet-signal-design ~/.codex/skills/
-cp -R quiet-signal/skills/quiet-signal-reports ~/.codex/skills/
+npx skills add oyorf/quiet-signal \
+  --skill quiet-signal-design \
+  --skill quiet-signal-reports
 ```
 
-如果你的 Agent 使用其他 Skill 目录，把目标路径替换成对应环境的目录即可。每个 Skill 的入口都是其目录下的 `SKILL.md`。
+以上命令都可以追加 `-g` 进行全局安装，或用 `--agent` 指定目标，例如：
+
+```bash
+npx skills add oyorf/quiet-signal --agent claude-code
+npx skills add oyorf/quiet-signal --agent cursor
+npx skills add oyorf/quiet-signal --agent codex
+```
+
+### Agent 兼容性
+
+Quiet Signal 使用开放的 Agent Skills 目录结构和 `SKILL.md` 格式，不绑定 Codex。`skills` CLI 当前支持 Claude Code、Codex、Cursor、OpenCode、Gemini CLI、GitHub Copilot、Cline、Warp、Zed 等多种 Agent；完整列表与每个平台的安装路径见 [`skills` 官方文档](https://github.com/vercel-labs/skills#supported-agents)。
+
+安装完成后，直接在自然语言指令里点名 Skill 是最通用的调用方式：
+
+```text
+Use the quiet-signal-design skill to apply Quiet Signal to this interface.
+Use the quiet-signal-xhs skill to turn this article into a Xiaohongshu series.
+Use the quiet-signal-reports skill to turn these sources into an A4 PDF report.
+```
+
+不同 Agent 也可能提供 `$skill-name`、斜杠命令或自动触发能力，具体以对应 Agent 的交互方式为准。若某个 Agent 尚未被 CLI 支持，也可以把所需 Skill 目录复制到该 Agent 的 Skills 目录；每个入口都是目录下的 `SKILL.md`。
 
 ## 1. 基座：`quiet-signal-design`
 
@@ -66,12 +89,12 @@ cp -R quiet-signal/skills/quiet-signal-reports ~/.codex/skills/
 ### 用法
 
 ```text
-Use $quiet-signal-design to apply Quiet Signal to this 1600×900 launch visual.
+Use the quiet-signal-design skill to apply Quiet Signal to this 1600×900 launch visual.
 Preserve the supplied copy and information structure, and export the final PNG.
 ```
 
 ```text
-Use $quiet-signal-design to audit this interface against the approved Quiet Signal
+Use the quiet-signal-design skill to audit this interface against the approved Quiet Signal
 core specification. List conforming decisions, violations, uncertainties, and the
 smallest useful corrections. Do not edit it.
 ```
@@ -93,7 +116,7 @@ smallest useful corrections. Do not edit it.
 ### 用法
 
 ```text
-Use $quiet-signal-xhs to turn this article into a polished 1080×1440 Xiaohongshu
+Use the quiet-signal-xhs skill to turn this article into a polished 1080×1440 Xiaohongshu
 image-card series. Preserve all facts and sources. Deliver editable source, every
 final PNG, and a contact sheet.
 ```
@@ -125,7 +148,7 @@ final PNG, and a contact sheet.
 ### 用法
 
 ```text
-Use $quiet-signal-reports to turn these sources into a source-backed A4 report.
+Use the quiet-signal-reports skill to turn these sources into a source-backed A4 report.
 Keep the full reasoning and limitations. Deliver editable HTML/CSS, a source ledger,
 the final PDF, rendered page PNGs, and a contact sheet.
 ```
