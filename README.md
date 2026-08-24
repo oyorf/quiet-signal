@@ -24,79 +24,53 @@ Quiet Signal 用近白表面、清晰的黑灰层级、编辑性字体关系、�
 | [`quiet-signal-xhs`](skills/quiet-signal-xhs/) | 生成、修改、渲染与审核 1080×1440 小红书图文 | 文章、文字、URL 或用户已规划的图文内容 | `quiet-signal-design` |
 | [`quiet-signal-reports`](skills/quiet-signal-reports/) | 制作可编辑 HTML/CSS、A4 PDF 与全页 QA 图 | 需要完整论证、来源与长篇阅读的报告 | `quiet-signal-design` |
 
-## 安装
+## 如何安装
 
-需要本机已有 Node.js 与 npm。运行一条命令即可：
+按需要选择下面的能力，把对应命令复制到终端运行。小红书和报告 Skill 依赖基座，因此安装时会一起加入 `quiet-signal-design`。
 
-```bash
-npx skills add oyorf/quiet-signal
-```
-
-[`skills` CLI](https://skills.sh/docs/cli) 会自动识别已经安装的 Agent，并让你选择目标 Agent、需要的 Skill 和安装范围。默认安装到当前项目；希望所有项目都能使用时，加上 `-g`：
+### 基座：视觉设计与审核
 
 ```bash
-npx skills add oyorf/quiet-signal -g
-```
-
-### 只安装需要的 Skill
-
-基座可以单独安装。安装小红书或报告 Skill 时，必须同时安装 `quiet-signal-design`：
-
-```bash
-# 只安装基座
 npx skills add oyorf/quiet-signal --skill quiet-signal-design
+```
 
-# 安装小红书能力（基座 + 小红书）
+### 小红书图文
+
+```bash
 npx skills add oyorf/quiet-signal \
   --skill quiet-signal-design \
   --skill quiet-signal-xhs
+```
 
-# 安装报告能力（基座 + 报告）
+### 长篇报告
+
+```bash
 npx skills add oyorf/quiet-signal \
   --skill quiet-signal-design \
   --skill quiet-signal-reports
 ```
 
-以上命令都可以追加 `-g` 进行全局安装，或用 `--agent` 指定目标，例如：
-
-```bash
-npx skills add oyorf/quiet-signal --agent claude-code
-npx skills add oyorf/quiet-signal --agent cursor
-npx skills add oyorf/quiet-signal --agent codex
-```
-
-### Agent 兼容性
-
-Quiet Signal 使用开放的 Agent Skills 目录结构和 `SKILL.md` 格式，不绑定 Codex。`skills` CLI 当前支持 Claude Code、Codex、Cursor、OpenCode、Gemini CLI、GitHub Copilot、Cline、Warp、Zed 等多种 Agent；完整列表与每个平台的安装路径见 [`skills` 官方文档](https://github.com/vercel-labs/skills#supported-agents)。
-
-安装完成后，直接在自然语言指令里点名 Skill 是最通用的调用方式：
-
-```text
-Use the quiet-signal-design skill to apply Quiet Signal to this interface.
-Use the quiet-signal-xhs skill to turn this article into a Xiaohongshu series.
-Use the quiet-signal-reports skill to turn these sources into an A4 PDF report.
-```
-
-不同 Agent 也可能提供 `$skill-name`、斜杠命令或自动触发能力，具体以对应 Agent 的交互方式为准。若某个 Agent 尚未被 CLI 支持，也可以把所需 Skill 目录复制到该 Agent 的 Skills 目录；每个入口都是目录下的 `SKILL.md`。
+安装完成后，复制下面对应的中文指令，粘贴到你的 Agent 工具中，再补充自己的内容或文件即可使用。
 
 ## 1. 基座：`quiet-signal-design`
 
 基座保存 Quiet Signal 的核心视觉身份，包括颜色、字体角色、空间关系、几何、表面、图像、动效与验收边界。它有两种使用方式：
 
-- **Apply**：把视觉语言应用到一个目标、内容、结构和输出要求已经明确的设计任务。
-- **Audit**：对现有作品进行审查，指出符合项、具体违反项与最小修正建议。
+- **应用**：把视觉语言应用到一个目标、内容、结构和输出要求已经明确的设计任务。
+- **审核**：对现有作品进行审查，指出符合项、具体违反项与最小修正建议。
 
 ### 用法
 
 ```text
-Use the quiet-signal-design skill to apply Quiet Signal to this 1600×900 launch visual.
-Preserve the supplied copy and information structure, and export the final PNG.
+使用 quiet-signal-design Skill，帮我设计一个内容策划工作台。
+保留素材库、选题列表、内容编辑区和发布状态四项核心功能，
+应用 Quiet Signal 视觉语言，输出完整的桌面端界面和可编辑源文件。
 ```
 
 ```text
-Use the quiet-signal-design skill to audit this interface against the approved Quiet Signal
-core specification. List conforming decisions, violations, uncertainties, and the
-smallest useful corrections. Do not edit it.
+使用 quiet-signal-design Skill，帮我设计一款个人知识管理 App。
+需要包含首页、内容详情页和搜索页，保留我提供的文案与功能结构，
+应用 Quiet Signal 视觉语言，输出完整界面和可编辑源文件。
 ```
 
 为了得到稳定结果，请同时提供：设计对象与目标、必须保留的内容、必要结构或功能、尺寸与技术限制，以及期望的交付格式。基座只定义“如何看起来”，不会替用户发明内容策略、产品功能或媒介规格。
@@ -116,9 +90,9 @@ smallest useful corrections. Do not edit it.
 ### 用法
 
 ```text
-Use the quiet-signal-xhs skill to turn this article into a polished 1080×1440 Xiaohongshu
-image-card series. Preserve all facts and sources. Deliver editable source, every
-final PNG, and a contact sheet.
+使用 quiet-signal-xhs Skill，把下面这篇文章制作成一组 1080×1440 的小红书图文。
+保留所有事实、限定条件和来源，交付可编辑源文件、每一页 PNG 和整组总览图。
+文章内容：
 ```
 
 如果页数、顺序或某页文案已经确定，请直接在提示中写明；Skill 会保留这些决定，只处理尚未锁定的部分。
@@ -148,9 +122,10 @@ final PNG, and a contact sheet.
 ### 用法
 
 ```text
-Use the quiet-signal-reports skill to turn these sources into a source-backed A4 report.
-Keep the full reasoning and limitations. Deliver editable HTML/CSS, a source ledger,
-the final PDF, rendered page PNGs, and a contact sheet.
+使用 quiet-signal-reports Skill，把下面这些资料整理成一份有来源支撑的 A4 长篇报告。
+保留完整论证、方法、证据边界和局限，交付可编辑 HTML/CSS、来源账本、
+最终 PDF、逐页 PNG 和整份报告总览图。
+资料内容：
 ```
 
 ### 示例：月球南极微生物长篇报告
@@ -160,26 +135,6 @@ the final PDF, rendered page PNGs, and a contact sheet.
 ![Quiet Signal 月球南极微生物 26 页报告总览](skills/quiet-signal-reports/references/demos/lunar-microbe-longform.png)
 
 完整 HTML/CSS、来源账本与本地图片位于 [`skills/quiet-signal-reports/references/implementations/lunar-microbe-longform/`](skills/quiet-signal-reports/references/implementations/lunar-microbe-longform/)。
-
-### 渲染依赖
-
-- Node.js、`playwright-core` 与 Chrome/Chromium：生成 PDF；
-- Python 3、Pillow 与 Poppler 的 `pdftoppm`：生成逐页 PNG 和总览图。
-
-从 `skills/quiet-signal-reports` 目录运行：
-
-```bash
-node scripts/render_report.mjs \
-  --input references/implementations/lunar-microbe-longform/index.html \
-  --output /path/to/output/quiet-signal-report.pdf \
-  --expected-pages 26
-
-python3 scripts/render_review.py \
-  --pdf /path/to/output/quiet-signal-report.pdf \
-  --output-dir /path/to/output/review
-```
-
-运行任一脚本的 `--help` 可查看完整参数。
 
 ## 设计原则
 
