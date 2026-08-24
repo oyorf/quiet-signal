@@ -79,7 +79,7 @@ npx skills add oyorf/quiet-signal \
 
 下面的个人任务与知识管理 App 由基座视觉语言组织：三个核心页面分别承载当日行动、知识检索与每周回顾，紫色只用于当前状态和关键数据，界面通过层级、细线与空间建立清晰阅读路径。
 
-![Quiet Signal 个人任务与知识管理 App 设计示例](docs/assets/quiet-signal-app-example.png)
+![Quiet Signal 个人任务与知识管理 App 设计示例](docs/assets/quiet-signal-app-example-v2.png)
 
 核心规范见 [`skills/quiet-signal-design/references/SPEC.md`](skills/quiet-signal-design/references/SPEC.md)。
 
