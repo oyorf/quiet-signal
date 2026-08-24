@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>月球南极的人类微生物足迹｜完整科研解读</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="report">
+    <section class="page cover dark" data-page="01">
+      <img class="bleed-image" src="assets/moon-earthset.jpg" alt="从月球附近看到的地球落">
+      <div class="image-shade"></div>
+      <header class="running inverse"><span>QUIET SIGNAL / RESEARCH REPORT 01</span><span>24 AUG 2026</span></header>
+      <div class="cover-title">
+        <p class="eyebrow">LUNAR SOUTH POLE · MICROBIAL SURVIVAL · PLANETARY PROTECTION</p>
+        <h1>月球南极的<br>人类<span>微生物足迹</span></h1>
+        <p class="subtitle">一份关于潜在可存活生态位、证据边界与载人探索前污染基线的完整科研解读</p>
+      </div>
+      <div class="cover-meta">
+        <div><small>研究对象</small><strong>五类人类 / 航天环境相关微生物</strong></div>
+        <div><small>研究方法</small><strong>耐受证据 × LRO 遥感 × 光照模型</strong></div>
+        <div><small>核心边界</small><strong>存活不等于生长、繁殖或定殖</strong></div>
+      </div>
+      <footer class="footer inverse"><span>图：Artemis II 航天员 / NASA</span><span>01</span></footer>
+    </section>
+
+    <section class="page frontmatter" data-page="02">
+      <header class="running"><span>证据范围</span><span>EVIDENCE SCOPE</span></header>
+      <div class="narrow top-large">
+        <p class="eyebrow">来源与结论边界</p>
+        <h2>先区分哪些结论有直接证据，<br>哪些仍需要进一步验证。</h2>
+        <p class="lead">这份解读围绕 Saxena 等人在 <i>Science Advances</i> 发表的研究《Potential survivable niches for microbial life on the lunar south pole》展开，重点解释研究问题、证据结构、结论边界及其对载人探索的含义。</p>
+        <p>论文题名、作者、摘要、期刊、卷期、DOI、开放许可和参考文献计数可由 Crossref、OpenAlex 与 PubMed 交叉确认；NASA Science 的官方解读公开了五类微生物、三个模拟地点、数据与模型组合、主要发现以及作者对研究边界的说明。</p>
+        <p>公开资料未包含论文全文参数、补充材料和全部图表数值，因此逐物种阈值、置信区间与精确生态位面积不进入本次比较。所有陈述按证据强度分层，无法直接核对的定量细节不作为结论。</p>
+        <div class="evidence-key">
+          <div><b>A</b><p><strong>论文摘要直接支持</strong><span>研究问题、总体方法、总体结论与边界。</span></p></div>
+          <div><b>B</b><p><strong>NASA 官方解读支持</strong><span>研究对象、地点、数据来源、尺度与访谈。</span></p></div>
+          <div><b>C</b><p><strong>权威背景来源支持</strong><span>月球环境、LRO、行星保护与任务语境。</span></p></div>
+          <div><b>D</b><p><strong>分析与实践建议</strong><span>基于上述证据提出的测量、基线和任务流程建议。</span></p></div>
+        </div>
+      </div>
+      <footer class="footer"><span>证据账本：sources.md · 事实截止 2026-08-24</span><span>02</span></footer>
+    </section>
+
+    <section class="page contents" data-page="03">
+      <header class="running"><span>目录</span><span>CONTENTS</span></header>
+      <div class="page-head"><p class="eyebrow">六个问题</p><h2>从“能不能活”走到<br>“我们该记录什么”。</h2></div>
+      <ol class="toc">
+        <li><span>04—06</span><div><b>研究究竟问了什么？</b><p>摘要、研究问题、证据结构与必要区分</p></div></li>
+        <li><span>07—09</span><div><b>为什么是月球南极？</b><p>低角度光照、地形阴影、温度与辐射</p></div></li>
+        <li><span>10—13</span><div><b>人类会带去什么？</b><p>污染路径、五类微生物与“存活”的含义</p></div></li>
+        <li><span>14—19</span><div><b>模型怎样得到结果？</b><p>耐受证据、遥感、三个地点与生态位尺度</p></div></li>
+        <li><span>20—24</span><div><b>结果如何改变任务判断？</b><p>限制、现行政策、证据张力与测量框架</p></div></li>
+        <li><span>25—26</span><div><b>还不知道什么？</b><p>研究局限、结论、参考文献与术语</p></div></li>
+      </ol>
+      <aside class="reading-note page-bottom-note"><b>阅读建议</b><p>报告按连续阅读设计。若只看结论，请仍保留第 20 页“没有证明什么”和第 25 页“局限与未知”；它们不是免责声明，而是结论本身的一部分。</p></aside>
+      <footer class="footer"><span>Quiet Signal / Research Report 01</span><span>03</span></footer>
+    </section>
+
+    <section class="page" data-page="04">
+      <header class="running"><span>01 / 摘要</span><span>ABSTRACT</span></header>
+      <div class="page-head"><p class="eyebrow">核心判断</p><h2>月球整体仍然极端，<br>但“整体极端”不等于“处处相同”。</h2></div>
+      <article class="reading-column section-reading">
+        <p class="lead">论文研究的不是月球是否存在原生生命，而是来自地球、尤其与人类和航天环境相关的微生物，是否可能在月球南极某些局地条件中保持生命状态。</p>
+        <p>多数未受保护的月表同时受到强紫外线、极端温度和高能粒子辐射影响，通常被视为不利于微生物存活。过去的载人月球探索全部发生在赤道附近，这种经验容易让人把赤道区域的环境直觉推广到整个月球。</p>
+        <p>研究者提出：极区的纬度、低太阳高度角与复杂地形可能产生长期低温、低紫外线通量的阴影区域。把微生物耐受证据与月球遥感、地形和高分辨率光照模型进行比较后，团队识别出可能允许短期存活的局地生态位。</p>
+        <p>NASA 的官方解读把这些区域描述为从数英里宽的坑底到航天员靴印大小不等。黑曲霉在五类研究对象中表现出较强紫外线耐受性，模型甚至允许它在部分有日照的区域保持存活。</p>
+        <p>这里的“存活”不包含增长概率；论文摘要使用的是隐生状态语境，即细胞可能维持生命，但只有在适居条件出现时才可能恢复生长。月球没有已知的大气、稳定液态水与适宜温度组合来支持这些微生物持续生长和繁殖。</p>
+        <p>研究的任务含义因此不是“月球会被生物占领”，而是：人类抵达后，某些地球来源的细胞可能比预想中保存得更久，从而干扰未来对月球化学、挥发物和潜在生物信号的出处判断。</p>
+      </article>
+      <div class="claim-band page-bottom-note"><span>一句话</span><strong>要保护的不是“无菌月球”的想象，而是未来证据仍然能够被正确归因。</strong></div>
+      <footer class="footer"><span>依据：[S1] 论文摘要；[S3] NASA Science</span><span>04</span></footer>
+    </section>
+
+    <section class="page prototype-page p05-flow" data-page="05">
+      <header class="running"><span>01 / 研究问题</span><span>THE QUESTION</span></header>
+      <div class="page-head"><p class="eyebrow">从一个错误问题开始</p><h2>“月球有没有生命”<br>会把研究带向错误方向。</h2></div>
+      <article class="reading-column question-flow">
+        <section>
+          <small>01 / 先排除</small>
+          <h3>论文没有回答月球是否存在原生生命。</h3>
+          <p>现有月球探测没有发现月球拥有自己的生命；这项研究也没有报告在月面检测到活细胞。研究对象来自地球，关注的是人类抵达后可能留下的微生物足迹。</p>
+        </section>
+        <section>
+          <small>02 / 再收紧</small>
+          <h3>论文也没有证明地球微生物能在月球繁殖。</h3>
+          <p>模型讨论的“存活”不包含生长与繁殖。论文摘要把结论限定在隐生状态，即细胞可能暂时维持生命，但月球环境并不因此成为可支持种群扩张的栖息地。</p>
+        </section>
+        <section class="core-question">
+          <small>03 / 真正的问题</small>
+          <h3>哪些局地环境，可能让被人类带去的微生物暂时没有死亡？</h3>
+          <p>这是一个“环境条件是否落在已知耐受边界内”的比较问题，也是一个污染可追踪性问题。</p>
+        </section>
+        <p>这个问题的科学价值来自时间顺序。人类抵达以前，极区样品中的有机物、挥发物与化学异常有一套自然历史；人类抵达以后，航天服、栖息舱、推进系统、废弃物和采样工具会引入新的物质。如果没有抵达前基线和抵达后的活动记录，未来研究者可能无法判断某个信号来自月球自然过程、历史无人任务，还是新近载人活动。</p>
+        <p>因此，“是否存活”并不是孤立的生物学好奇心。它连接了遥感、微生物耐受、污染控制、样品科学和行星保护。只要细胞或其分子痕迹能够被保存，出处判断就会变得更困难。</p>
+      </article>
+      <footer class="footer"><span>依据：[S1][S3][S6]</span><span>05</span></footer>
+    </section>
+
+    <section class="page" data-page="06">
+      <header class="running"><span>01 / 证据结构</span><span>EVIDENCE CHAIN</span></header>
+      <div class="page-head"><p class="eyebrow">输入 → 比较 → 输出</p><h2>这是一项模型研究，<br>不是月面培养实验。</h2></div>
+      <div class="chain">
+        <article><span>01</span><h3>微生物耐受证据</h3><p>从既有研究整理特定微生物能够承受的热与紫外线条件。</p><small>已发表实验与航天环境观察</small></article>
+        <article><span>02</span><h3>月球环境证据</h3><p>使用 LRO 高程、温度与月球南极地形数据描述局地表面条件。</p><small>遥感，不是现场生物采样</small></article>
+        <article><span>03</span><h3>光照与辐射模型</h3><p>计算低角度太阳光如何被山脊、坑壁和微地形遮挡。</p><small>地点与尺度敏感</small></article>
+        <article><span>04</span><h3>条件比较</h3><p>判断某个表面单元是否落在某类微生物的已知耐受范围内。</p><small>“可能适于存活”，不是检测到活体</small></article>
+        <article><span>05</span><h3>生态位地图</h3><p>标出潜在可存活区域，并比较不同微生物和地点的差异。</p><small>模型输出，需要实地验证</small></article>
+      </div>
+      <div class="method-caution page-bottom-note"><b>证据不能跨越的最后一步</b><p>模型可以说明“环境条件与已知耐受数据相容”，不能证明一枚真实细胞已经抵达、仍然可培养、具有代谢活动，或能在当地繁殖。</p></div>
+      <footer class="footer"><span>依据：[S1][S2][S3]</span><span>06</span></footer>
+    </section>
+
+    <section class="page chapter dark" data-page="07">
+      <div class="chapter-number">02</div>
+      <div class="chapter-copy"><p class="eyebrow">WHY THE SOUTH POLE</p><h2>为什么是<br>月球南极？</h2><p>同一个没有大气的月球，因为纬度和地形，在几米甚至更小的尺度上形成完全不同的光照、温度与辐射历史。</p></div>
+      <div class="chapter-index"><span>07 光与阴影</span><span>08 热环境</span><span>09 南极的任务吸引力</span></div>
+      <footer class="footer inverse"><span>Chapter 02</span><span>07</span></footer>
+    </section>
+
+    <section class="page prototype-page p08-figure" data-page="08">
+      <header class="running"><span>02 / 光与阴影</span><span>ILLUMINATION</span></header>
+      <div class="page-head"><p class="eyebrow">1.54°</p><h2>太阳贴着地平线走，<br>微小地形也能制造长阴影。</h2></div>
+      <div class="figure-reading-layout">
+        <article class="reading-column compact-reading">
+          <p class="lead">月球自转轴相对轨道面的倾角很小。NASA 的南极光照图说明采用 1.54°，远小于地球约 23.5° 的轴倾。</p>
+          <p>在极区，太阳长期处于很低的高度角。山脊、坑壁、岩石和小型凸起都会把光挡在低洼区域之外。某些地点一年中大部分时间有光，邻近的坑底却可能长期甚至永久处于阴影。</p>
+          <p>这不是一张静态的“亮区/暗区”地图。NASA LRO 团队在六个月内收集了 1,700 幅覆盖同一区域的 WAC 图像，把每一幅图转换为光照或阴影的二元信息，再叠加计算每个像素被照亮的时间比例。</p>
+          <p>对微生物而言，阴影最直接地降低紫外线暴露；对挥发物与有机分子而言，阴影与低温还可能延缓破坏或逸散。研究正是利用这种局地差异，挑战“月表处处同样致命”的粗略假设。</p>
+        </article>
+        <figure class="illumination-figure">
+          <div class="figure-title"><b>图 1</b><span>低太阳高度角如何形成局地阴影</span></div>
+          <div class="illumination-diagram" role="img" aria-label="低角度阳光被山脊遮挡并在背光面形成长期阴影">
+            <span class="sun-label">太阳光 / 低角度入射</span>
+            <i class="ray"></i>
+            <div class="ridge"></div>
+            <div class="shadow"></div>
+            <span class="ridge-label">山脊或坑壁</span>
+            <span class="shadow-label">低紫外线区</span>
+          </div>
+          <figcaption>太阳接近地平线时，微小高程差也会延长阴影。图示解释几何关系，不代表实际坡度或距离。</figcaption>
+          <p class="figure-source">示意图：依据 NASA PIA13720 重绘</p>
+        </figure>
+      </div>
+      <aside class="inline-note page-bottom-note"><b>地图范围</b><p>NASA PIA13720 覆盖 88°S 至 90°S；Shackleton 环形山位于图中央附近，直径约 19 千米。</p></aside>
+      <footer class="footer"><span>依据：[S4][S5]</span><span>08</span></footer>
+    </section>
+
+    <section class="page prototype-page p09-explanation" data-page="09">
+      <header class="running"><span>02 / 热环境</span><span>THERMAL MOSAIC</span></header>
+      <div class="page-head"><p class="eyebrow">没有大气重新分配热量</p><h2>月球南极不是一个温度，<br>而是一幅热环境拼图。</h2></div>
+      <article class="reading-column thermal-reading">
+        <p class="lead">月球几乎没有大气，表面吸收多少太阳能，几乎直接决定局地热环境。纬度、太阳角度、高程与周围地形共同控制某处在何时被照亮、何时冷却。</p>
+        <p>NASA 2026 年环境说明指出，南极某些永久阴影区可低至约 -203°C；邻近受光表面则可能明显更暖。这个数值描述的是特定极端区域，不代表研究的三个地点或每一个模型单元都处于同一温度。</p>
+      </article>
+      <div class="condition-table" role="table" aria-label="三类光照环境的物理特征及其模型意义">
+        <div class="condition-head" role="row"><span>环境状态</span><span>可确认的物理特征</span><span>对模型的意义</span></div>
+        <div role="row"><b>受光表面</b><p>太阳能输入更高，直接紫外线暴露更强。</p><p>热与紫外线损伤可能同时限制细胞存活。</p></div>
+        <div role="row"><b>移动阴影</b><p>受光与遮挡随时间变化，热循环明显。</p><p>需要比较完整暴露历史，不能只看一个时刻。</p></div>
+        <div role="row"><b>永久阴影</b><p>长期缺少直接日照，局地可达到极低温。</p><p>紫外线较低，但真空、低温与粒子辐射仍然存在。</p></div>
+      </div>
+      <article class="reading-column thermal-reading continuation">
+        <p>极低温不自动等于“更适合生命”。它会抑制代谢、破坏细胞结构，也可能把水和有机分子冻结保存。研究关心的是，在紫外线、热和其他损伤共同作用下，某些细胞是否还能维持隐生状态。</p>
+        <p>因此“可存活生态位”不是单一变量阈值。温度足够低但辐射过强，或者紫外线很低但其他条件超过耐受范围，都可能让细胞失去活性。模型必须把空间与时间条件放在一起比较。</p>
+      </article>
+      <aside class="inline-note page-bottom-note"><b>不要把冷等同于适居</b><p>适居通常要求能支持代谢与繁殖；本研究只讨论可能避免快速死亡的局地条件。极冷可以保存，也可以造成损伤。</p></aside>
+      <footer class="footer"><span>依据：[S1][S3][S4]</span><span>09</span></footer>
+    </section>
+
+    <section class="page prototype-page p10-parallel" data-page="10">
+      <header class="running"><span>03 / 污染路径</span><span>HUMAN ARRIVAL</span></header>
+      <div class="page-head"><p class="eyebrow">人类不是无菌载荷</p><h2>微生物不需要被“故意携带”，<br>也会随系统一起抵达。</h2></div>
+      <div class="pathways-v2">
+        <article><span>01</span><div><b>人体</b><p>皮肤、呼吸道和人体微生物群持续释放细胞与生物分子。</p></div></article>
+        <article><span>02</span><div><b>航天服</b><p>穿脱、排气、表面接触和舱外活动把内部与外部环境连接起来。</p></div></article>
+        <article><span>03</span><div><b>栖息舱</b><p>空气循环、滤网、潮湿表面与维护活动形成长期微生物来源。</p></div></article>
+        <article><span>04</span><div><b>工具与采样</b><p>钻取、搬运和封装会把不同地点、深度和设备表面的物质交叉带走。</p></div></article>
+        <article><span>05</span><div><b>推进与排放</b><p>推进剂产物、真空放气与羽流可把挥发物和有机物输送到冷阱。</p></div></article>
+        <article><span>06</span><div><b>废弃物与故障</b><p>处置物、泄漏、磨损碎屑和异常事件会留下难以预先建模的来源。</p></div></article>
+      </div>
+      <article class="reading-column pathways-reading">
+        <p>NASA 的研究解读用一个直观尺度说明问题：一块铅笔橡皮大小的皮肤平均约有一百万个细菌。这个数字不是某次月球任务的实际排放量，却说明载人系统与无人探测器不同，不能通过高温烘烤把整个人类系统变成无菌载荷。</p>
+        <p>污染也不限于活细胞。死细胞、DNA、蛋白质、有机物、推进剂挥发物和材料放气都会影响未来的化学与生命探测。微生物“能否活”只是出处追踪问题的一部分，却是过去月球科学容易忽略的一部分。</p>
+      </article>
+      <footer class="footer"><span>依据：[S3][S7][S8]</span><span>10</span></footer>
+    </section>
+
+    <section class="page photo-page" data-page="11">
+      <header class="running inverse"><span>03 / 航天环境</span><span>SPACECRAFT MICROBIOME</span></header>
+      <img class="bleed-image" src="assets/iss-microbe-sampling.jpg" alt="国际空间站内采集微生物样本">
+      <div class="image-shade side"></div>
+      <div class="photo-copy">
+        <p class="eyebrow">为什么选择这些微生物</p>
+        <h2>研究对象来自我们已经<br>在人体或航天环境中认识的邻居。</h2>
+        <p>NASA 说明，五类对象因常见于人体、航天环境或具有已知耐受性而被选入。国际空间站内部能够采集到黑曲霉；既有实验也显示某些物种可以在空间站外部暴露后存活。</p>
+        <p>研究的现实问题不是寻找最极端的地球生物，而是评估实际有机会搭乘载人任务抵达月球的生物。NASA 受访研究者特别指出，这些物种通常并不被视为能够承受太空真空的典型“极端微生物”，其韧性本身值得重新评估。</p>
+      </div>
+      <div class="photo-caption"><b>Kate Rubins，2016</b><span>在国际空间站日本实验舱采集微生物样本。图：JAXA / Takuya Onishi。</span></div>
+      <footer class="footer inverse"><span>依据：[S3]</span><span>11</span></footer>
+    </section>
+
+    <section class="page" data-page="12">
+      <header class="running"><span>03 / 五类研究对象</span><span>ORGANISM LEDGER</span></header>
+      <div class="page-head"><p class="eyebrow">公开证据的比较边界</p><h2>五类微生物进入模型，<br>但公开材料只支持有限比较。</h2></div>
+      <div class="organisms">
+        <article><span>FUNGUS</span><h3>Aspergillus niger</h3><p>黑曲霉。常见于温暖潮湿环境，也曾在国际空间站内被采样。NASA 解读明确称其为五类中紫外线耐受性最强，并指出模型允许其在部分有日照区域存活。</p></article>
+        <article><span>BACTERIUM</span><h3>Bacillus subtilis</h3><p>枯草芽孢杆菌。可形成耐受性较强的芽孢，是微生物耐受与行星保护研究中常见对象。公开解读确认进入模型，但未给出本研究中的定量阈值。</p></article>
+        <article><span>BACTERIUM</span><h3>Staphylococcus aureus</h3><p>金黄色葡萄球菌。与人体相关，代表载人活动可能携带的常见微生物类型。公开解读没有提供其生态位面积或相对排名。</p></article>
+        <article><span>BACTERIUM</span><h3>Deinococcus radiodurans</h3><p>耐辐射奇球菌。以辐射耐受研究而知名；但“耐辐射”不能自动推导出在全部月球条件下存活，仍需与温度和紫外线条件共同比较。</p></article>
+        <article><span>FUNGI</span><h3>Fusarium species</h3><p>镰刀菌属若干物种。NASA 将其归入与航天环境相关的真菌对象。公开材料没有列出具体物种、菌株或模型阈值。</p></article>
+      </div>
+      <footer class="footer"><span>依据：[S3]；补充常识仅用于解释，不替代论文参数</span><span>12</span></footer>
+    </section>
+
+    <section class="page" data-page="13">
+      <header class="running"><span>03 / 概念边界</span><span>SURVIVE ≠ GROW</span></header>
+      <div class="page-head"><p class="eyebrow">最容易被标题压缩掉的区别</p><h2>活着、活动、生长、繁殖，<br>是四个不同命题。</h2></div>
+      <div class="ladder">
+        <article class="active"><span>01</span><h3>保持生命状态</h3><p>研究语境中的最低判断：至少一个地球日没有失去生命状态，或维持隐生状态。</p><b>本研究讨论</b></article>
+        <article><span>02</span><h3>存在代谢活动</h3><p>细胞正在交换物质、修复损伤或产生可检测代谢信号。</p><b>未由模型证明</b></article>
+        <article><span>03</span><h3>生长</h3><p>细胞体积、结构或生物量在当地条件下持续增加。</p><b>未由模型证明</b></article>
+        <article><span>04</span><h3>繁殖与定殖</h3><p>种群能够复制、扩张，并在环境中长期维持。</p><b>没有证据支持</b></article>
+      </div>
+      <article class="reading-column concept-reading">
+        <p>论文摘要把结论限定为 cryptobiotic state：一种代谢显著降低或暂时停止、在适宜条件恢复后可能重新活动的状态。这个词的作用是收紧结论，不是暗示月球提供了未来必然恢复的环境。</p>
+        <p>NASA 解读进一步指出，月球缺少通常支持生长与复制的关键条件，例如稳定液态水、大气与温和温度。因此，把“survivable niches”翻译成“生命绿洲”会产生严重误导；更准确的是“可能延缓死亡或保存细胞的局地条件”。</p>
+      </article>
+      <footer class="footer"><span>依据：[S1][S3]</span><span>13</span></footer>
+    </section>
+
+    <section class="page chapter light" data-page="14">
+      <div class="chapter-number">04</div>
+      <div class="chapter-copy"><p class="eyebrow">FROM INPUTS TO NICHES</p><h2>模型怎样<br>得到结果？</h2><p>研究把两类本来分离的证据放在同一空间框架中：微生物能承受什么，以及月表每个位置经历什么。</p></div>
+      <div class="chapter-index"><span>14 耐受证据</span><span>15 月表模型</span><span>16 三个地点</span><span>17—19 结果与解释</span></div>
+      <footer class="footer"><span>Chapter 04</span><span>14</span></footer>
+    </section>
+
+    <section class="page" data-page="15">
+      <header class="running"><span>04 / 方法一</span><span>MICROBIAL THRESHOLDS</span></header>
+      <div class="page-head"><p class="eyebrow">从既有实验出发</p><h2>先确定每类微生物<br>已经表现出的耐受边界。</h2></div>
+      <div class="body-copy two-col">
+        <div>
+          <p class="lead">NASA 解读称，研究团队分析既有研究，记录每类对象能够承受的最高热条件与紫外线剂量。论文摘要还把高能粒子辐射列为限制月表存活的重要因素。</p>
+          <p>这种做法的优点是能够整合已经发生的实验和航天暴露数据，不需要在月球上等待多年观测。但它也带来可比性问题：不同研究可能使用不同菌株、培养状态、暴露时间、湿度、保护材料和“存活”检测方法。</p>
+          <p>阈值不是物种永远不变的常数。一个被尘埃、航天服纤维或有机残留包裹的细胞，可能与裸露细胞经历不同剂量；芽孢、菌丝、休眠细胞和活跃细胞也不能简单等同。</p>
+        </div>
+        <div>
+          <div class="threshold-graphic"><div><span>实验条件</span><i></i></div><div><span>菌株 / 状态</span><i></i></div><div><span>暴露时间</span><i></i></div><div><span>存活判据</span><i></i></div><strong>耐受证据不是单一数字</strong></div>
+          <p>公开资料未给出逐物种温度和紫外线阈值，因此不能用其他研究中的数值进行替代拼接。不同实验条件下的阈值不能直接互换。</p>
+        </div>
+      </div>
+      <footer class="footer"><span>依据：[S1][S3]</span><span>15</span></footer>
+    </section>
+
+    <section class="page" data-page="16">
+      <header class="running"><span>04 / 方法二</span><span>LUNAR SURFACE MODEL</span></header>
+      <div class="page-head"><p class="eyebrow">把月球切成环境单元</p><h2>高程决定遮挡，<br>遮挡改变光、热与紫外线历史。</h2></div>
+      <div class="model-layers">
+        <article><span>REMOTE SENSING</span><h3>高程</h3><p>LRO 数据描述坑壁、山脊与坡面的相对高度，为视线和日照遮挡计算提供几何基础。</p></article>
+        <article><span>REMOTE SENSING</span><h3>温度</h3><p>轨道观测与热环境数据约束表面在不同光照条件下经历的温度范围。</p></article>
+        <article><span>PHYSICS MODEL</span><h3>光照</h3><p>高分辨率模型计算太阳低角度入射时，每个位置何时受光、何时被地形遮挡。</p></article>
+        <article><span>PHYSICS MODEL</span><h3>辐射</h3><p>模型考虑辐射如何到达月表，并与微生物耐受边界进行空间比较。</p></article>
+      </div>
+      <article class="reading-column section-reading">
+        <p>NASA 解读把模型结果称为“survivable niches”地图。这里的 niche 不是完整生态系统，而是表面条件在某段时间内与某类微生物耐受范围相容的空间单元。</p>
+        <p>空间分辨率很重要。极区地形造成的环境差异可以从大型坑底延伸到靴印尺度；使用过粗网格可能把小阴影平均掉，使用很细网格又会增加对高程误差、太阳角度和材料遮挡的敏感性。公开摘要未提供具体分辨率，因此无法复原数值结果。</p>
+      </article>
+      <footer class="footer"><span>依据：[S1][S2][S3][S5]</span><span>16</span></footer>
+    </section>
+
+    <section class="page" data-page="17">
+      <header class="running"><span>04 / 三个地点</span><span>THREE REGIONS</span></header>
+      <div class="page-head"><p class="eyebrow">不是“整个月球南极”</p><h2>模型聚焦三个候选区域，<br>结论不能无条件外推。</h2></div>
+      <div class="sites">
+        <article><span>01</span><h3>Nobile Rim</h3><p>NASA 官方解读列出的三个模拟区域之一。名称指向 Nobile 环形山边缘附近的极区地形。</p></article>
+        <article><span>02</span><h3>Connecting Ridge</h3><p>位于南极复杂山脊系统的连接区域；低角度日照使坡向和遮挡变化成为关键。</p></article>
+        <article><span>03</span><h3>De Gerlache Rim</h3><p>De Gerlache 环形山边缘区域。模型在这里比较地形、温度和辐射条件与微生物耐受。</p></article>
+      </div>
+      <article class="reading-column section-reading">
+        <p class="lead">地点选择让研究接近真实载人探索语境，但也限定了结论边界。三个区域的阳坡、阴坡、坑底和小尺度遮挡都可能不同，不能把某处的潜在生态位比例直接代表整个南极。</p>
+        <p>同样，未来基础设施会改变局地环境。着陆器、栖息舱、太阳能系统、车辙和堆放物会制造新的阴影、反射面和热源。原始地形模型描述的是抵达前环境，长期任务还需要把人造结构加入动态模型。</p>
+      </article>
+      <footer class="footer"><span>依据：[S3]</span><span>17</span></footer>
+    </section>
+
+    <section class="page" data-page="18">
+      <header class="running"><span>04 / 结果一</span><span>SCALE OF NICHES</span></header>
+      <div class="page-head"><p class="eyebrow">从坑底到靴印</p><h2>关键结果不是一个总面积，<br>而是生态位跨越多个尺度。</h2></div>
+      <div class="scale-diagram">
+        <div class="crater-shape"><span>数英里宽的坑底</span></div>
+        <div class="scale-line"><i></i><i></i><i></i></div>
+        <div class="boot-shape"><span>航天员靴印</span></div>
+      </div>
+      <article class="reading-column section-reading">
+        <p class="lead">NASA 对论文的官方解读称，可存活生态位从数英里宽的坑底一直到航天员靴印大小。这句话说明模型识别到的不是少数固定类型地点，而是一组由地形遮挡产生的空间尺度谱。</p>
+        <p>大型永久阴影区容易被遥感识别，也常因水冰和挥发物受到关注；小型阴影则可能紧贴实际操作区域，例如岩石背面、坑缘凹陷或人类活动产生的新遮挡。</p>
+        <p>对污染追踪而言，小尺度生态位尤其棘手。污染源可能沿着脚步、工具接触和物料移动形成离散分布；如果采样计划只按公里级区域管理，就可能错过微生物真正被保存的位置。</p>
+        <p>但“靴印尺度”不等于论文已经模拟了每一枚真实脚印。它是 NASA 用来说明潜在生态位下限的尺度描述，不能据此换算确定面积、概率或存活数量。</p>
+      </article>
+      <footer class="footer"><span>依据：[S3]</span><span>18</span></footer>
+    </section>
+
+    <section class="page" data-page="19">
+      <header class="running"><span>04 / 结果二</span><span>SPECIES DIFFERENCE</span></header>
+      <div class="page-head"><p class="eyebrow">物种差异与共同边界</p><h2>黑曲霉给出最强信号，<br>但不能代表所有微生物。</h2></div>
+      <div class="finding-grid">
+        <article class="primary"><small>NASA 明确描述</small><h3>Aspergillus niger</h3><p>在五类对象中紫外线耐受性最强；模型显示它甚至可能在部分有日照的区域保持存活。</p></article>
+        <article><small>论文摘要总体结论</small><h3>显著极区面积</h3><p>月球极区存在“显著区域”，其表面条件可能适于特定微生物存活。</p></article>
+        <article><small>所有对象共同边界</small><h3>不是增长模型</h3><p>结论不包含生长概率，只讨论如果未来出现适居条件，隐生细胞可能恢复的状态。</p></article>
+        <article><small>公开证据边界</small><h3>不能建立物种排名</h3><p>公开材料没有给出其余四类对象的完整面积、阈值与置信区间，无法进行定量排序。</p></article>
+      </div>
+      <article class="reading-column section-reading">
+        <p>结果真正改变的是先验判断：过去可能把“月球表面极端”简化为“被带去的细胞会迅速、普遍失活”；新研究提示，在极区地形造成的阴影中，这一判断不能对所有位置成立。</p>
+        <p>但先验被修正不等于风险已经量化。要从“存在潜在生态位”走到“任务会留下多少可培养细胞”，还需要知道释放量、沉降与输运、尘埃屏蔽、暴露历史、采样效率和检测下限。</p>
+      </article>
+      <footer class="footer"><span>依据：[S1][S3]</span><span>19</span></footer>
+    </section>
+
+    <section class="page" data-page="20">
+      <header class="running"><span>05 / 解释边界</span><span>WHAT IT DOES NOT PROVE</span></header>
+      <div class="page-head"><p class="eyebrow">限制不是尾注</p><h2>这项研究没有证明什么，<br>决定了它真正证明了什么。</h2></div>
+      <div class="not-proven">
+        <article><b>没有证明月球存在原生生命</b><p>研究对象来自地球，问题是前向污染和信号归因。</p></article>
+        <article><b>没有在月面检测到活微生物</b><p>这是遥感与耐受数据驱动的模型研究，不是现场培养。</p></article>
+        <article><b>没有证明微生物会生长或繁殖</b><p>结论限定为短期存活或隐生状态。</p></article>
+        <article><b>没有证明所有南极阴影都相同</b><p>地形、光照、温度与辐射在空间和时间上变化。</p></article>
+        <article><b>公开材料没有给出任务污染量</b><p>释放、运输、沉积与采样效率不在公开摘要细节中。</p></article>
+        <article><b>没有自动推翻现行行星保护规则</b><p>政策更新需要完整证据、任务权衡和跨机构程序。</p></article>
+      </div>
+      <div class="claim-band page-bottom-note"><span>它支持的是</span><strong>在载人探索前后建立可追踪基线，并把微生物存活纳入极区科学完整性判断。</strong></div>
+      <footer class="footer"><span>依据：[S1][S3][S7][S8]</span><span>20</span></footer>
+    </section>
+
+    <section class="page" data-page="21">
+      <header class="running"><span>05 / 现行政策</span><span>PLANETARY PROTECTION</span></header>
+      <div class="page-head"><p class="eyebrow">2026 年的规则重点是记录</p><h2>月球行星保护目前不是<br>“全面灭菌”，而是分类与清单。</h2></div>
+      <div class="policy-table">
+        <div class="head"><span>类别</span><span>任务</span><span>推进剂挥发物</span><span>有机物清单</span></div>
+        <div><b>II</b><span>月球轨道任务</span><span>—</span><span>—</span></div>
+        <div><b>IIa</b><span>非 IIb 月表任务</span><span>需要报告</span><span>—</span></div>
+        <div class="highlight"><b>IIb</b><span>永久阴影区及月球极区</span><span>需要报告</span><span>需要报告</span></div>
+      </div>
+      <article class="reading-column section-reading">
+        <p class="lead">NASA 2026 年快速指南强调，月球任务的现行行星保护要求相对简单：核心是报告。月表任务需要记录释放到月球环境中的推进产物；到永久阴影区或极区的任务还需要提供航天器有机物清单。</p>
+        <p>指南建议在发射前提交估算，在任务结束时更新变化，并尽可能记录处置物位置与图像。报告的目的，是让未来科学家能够把后来的发现放回已知人类活动背景中。</p>
+        <p>该指南同时写道，当前专家结论认为月表不支持生命或地球微生物的增殖，生物污染不是月球科学 concern；因此没有针对设计、操作、着陆点或有机物数量的全面限制。</p>
+        <p>这与新论文的差别集中在“增殖”和“存活”之间。指南讨论不支持增殖，新论文讨论部分局地可能延长隐生存活。二者可以同时成立，但现行报告体系是否足以追踪活细胞及其分子痕迹，成为新的实践问题。</p>
+      </article>
+      <footer class="footer"><span>依据：[S7][S8]；表格按 NASA 快速指南重绘</span><span>21</span></footer>
+    </section>
+
+    <section class="page" data-page="22">
+      <header class="running"><span>05 / 证据与政策</span><span>THE GAP</span></header>
+      <div class="page-head"><p class="eyebrow">不是“论文推翻政策”</p><h2>新的证据更像是在现行清单下，<br>增加一层需要追踪的对象。</h2></div>
+      <div class="gap-map">
+        <div class="policy-side"><small>现行报告重点</small><h3>材料与释放</h3><ul><li>推进剂产物</li><li>大宗有机材料</li><li>任务前后清单</li><li>处置位置</li></ul></div>
+        <div class="bridge"><span>需要连接</span></div>
+        <div class="evidence-side"><small>新研究提出</small><h3>生物可保存性</h3><ul><li>活细胞与休眠体</li><li>微生物来源</li><li>局地阴影生态位</li><li>时间序列变化</li></ul></div>
+      </div>
+      <article class="reading-column section-reading">
+        <p class="lead">政策清单回答“任务带来了哪些材料”；存活研究追问“其中哪些生物对象可能在什么位置保存多久”。前者是出处记录的基础，后者决定记录需要怎样转化为采样和监测设计。</p>
+        <p>更直接的实践选择不是宣布月球需要火星级灭菌，而是提高基线与追踪的可操作性。具体包括记录载人系统的微生物指纹、把活动路径与排放事件时间化、在抵达前保存对照样品，并为小尺度阴影设置监测点。</p>
+        <p>这仍然不是正式政策建议。完整的规则更新需要评估证据可重复性、操作成本、科学价值、国际一致性以及任务安全。研究提供的是重新检查假设的理由。</p>
+      </article>
+      <footer class="footer"><span>依据：[S1][S3][S7][S8]</span><span>22</span></footer>
+    </section>
+
+    <section class="page" data-page="23">
+      <header class="running"><span>05 / 测量框架</span><span>BEFORE → DURING → AFTER</span></header>
+      <div class="page-head"><p class="eyebrow">建议的测量框架</p><h2>把一次“清洁检查”改成<br>可追踪的时间序列。</h2></div>
+      <div class="timeline">
+        <article><span>BEFORE</span><h3>抵达前基线</h3><ul><li>轨道与机器人先导采样</li><li>目标区化学、挥发物与有机物背景</li><li>阴影/受光配对样点</li><li>采样空白与地面实验空白</li></ul></article>
+        <article><span>DURING</span><h3>活动过程记录</h3><ul><li>航天员、航天服与舱内微生物谱</li><li>排气、羽流、泄漏与接触事件</li><li>人员和工具路径</li><li>时间、坐标、环境条件</li></ul></article>
+        <article><span>AFTER</span><h3>重复采样</h3><ul><li>相同点位与新阴影点位</li><li>活性、可培养性与分子检测并行</li><li>与任务微生物指纹比对</li><li>长期保存原始样品</li></ul></article>
+      </div>
+      <article class="reading-column section-reading">
+        <p>只在任务前证明设备“足够干净”无法回答任务后信号来自哪里。时间序列要求同一套坐标、样品编号、空白控制和元数据贯穿抵达前后，让变化能够与具体活动对应。</p>
+        <p>检测也不应只依赖培养。很多环境微生物难以在标准培养条件下复苏；DNA 或蛋白质检测又无法单独证明细胞仍活着。理想体系需要把培养、活性指标、分子检测与材料清单结合，分别回答“有什么”“从哪里来”“是否还活着”。</p>
+      </article>
+      <footer class="footer"><span>依据：[S3][S7][S8]</span><span>23</span></footer>
+    </section>
+
+    <section class="page" data-page="24">
+      <header class="running"><span>05 / 最小记录集</span><span>TRACEABILITY DATA</span></header>
+      <div class="page-head"><p class="eyebrow">让未来研究者仍能复盘</p><h2>一条污染记录，至少要同时回答<br>时间、位置、来源、对象与检测方法。</h2></div>
+      <div class="record-table">
+        <div class="head"><span>字段</span><span>为什么需要</span><span>示例内容</span></div>
+        <div><b>时间</b><p>把信号与任务事件对应</p><span>采样、排气、舱外活动的统一时标</span></div>
+        <div><b>位置</b><p>识别局地阴影与输运路径</p><span>坐标、高程、坡向、光照状态、图像</span></div>
+        <div><b>来源</b><p>区分人员、设备与环境</p><span>航天员、航天服、工具、舱段、推进系统</span></div>
+        <div><b>对象</b><p>连接材料清单与微生物证据</p><span>有机物、细胞、DNA、芽孢、真菌结构</span></div>
+        <div><b>检测</b><p>解释“未检出”的真实含义</p><span>培养条件、测序方法、活性指标、检出限</span></div>
+        <div><b>空白</b><p>识别地面与实验室引入</p><span>现场空白、工具空白、运输空白、试剂空白</span></div>
+        <div><b>处置</b><p>支持多年后的重新分析</p><span>样品分装、保存温度、剩余量、访问记录</span></div>
+      </div>
+      <article class="reading-column section-reading">
+        <p>NASA 现行指南指出，许多任务其实已经拥有材料使用清单、舱单、装箱单和污染控制分析。挑战不是从零开始收集，而是把分散记录转换为能够与科学样品、坐标和时间连接的数据。</p>
+        <p>字段级记录可以避免“建立基线”停留在口号。没有检出限、空白和保存链，未来即使发现相同微生物，也无法判断它在月球上存活，还是在采样与分析过程中被引入。</p>
+      </article>
+      <footer class="footer"><span>依据：[S8]</span><span>24</span></footer>
+    </section>
+
+    <section class="page" data-page="25">
+      <header class="running"><span>06 / 局限与未知</span><span>LIMITATIONS</span></header>
+      <div class="page-head"><p class="eyebrow">下一步研究议程</p><h2>模型发现了值得测量的地方，<br>还没有替代真实测量。</h2></div>
+      <div class="limitations">
+        <article><span>01</span><h3>公开证据范围</h3><p>摘要与官方解读未提供全文参数、原图、补充材料与逐物种结果，无法支持完整的定量复核。</p></article>
+        <article><span>02</span><h3>耐受证据的可比性</h3><p>菌株、状态、基质、暴露时间和存活判据可能不同；阈值不能脱离实验条件使用。</p></article>
+        <article><span>03</span><h3>多重胁迫交互</h3><p>真空、干燥、紫外线、粒子辐射、热循环与尘埃可能协同或相互抵消，单项耐受不等于组合耐受。</p></article>
+        <article><span>04</span><h3>真实输运未知</h3><p>细胞从航天服或舱体释放后如何移动、被尘埃包裹、沉降或进入冷阱，需要现场数据。</p></article>
+        <article><span>05</span><h3>动态环境变化</h3><p>人造结构会产生新阴影、热源和物质通量；抵达前模型不能独自代表长期基地环境。</p></article>
+        <article><span>06</span><h3>检测与复苏差异</h3><p>“不可培养”不一定等于死亡，检测到 DNA 也不等于活着；多种方法必须并行解释。</p></article>
+      </div>
+      <div class="claim-band page-bottom-note"><span>研究优先级</span><strong>先做可追踪的现场基线，再谈月球上的真实存活时间、空间分布与任务影响。</strong></div>
+      <footer class="footer"><span>依据：[S1][S3]</span><span>25</span></footer>
+    </section>
+
+    <section class="page closing dark" data-page="26">
+      <header class="running inverse"><span>06 / 结论与参考</span><span>CONCLUSION + REFERENCES</span></header>
+      <div class="closing-copy">
+        <p class="eyebrow">最终判断</p>
+        <h2>人类抵达月球时，<br>也会改变未来证据的<span>出处</span>。</h2>
+        <p class="lead">这项研究没有把月球变成适居世界。它做了一件更具体、也更重要的事：证明极区的地形与光照差异足以让“地球微生物会在月表迅速失活”不再是可以对所有地点默认成立的假设。</p>
+        <p>真正稳妥的回应不是夸大生命风险，也不是等待政策给出所有答案，而是在首次长期载人活动前建立化学和微生物基线；在任务中记录人员、设备、排放和路径；在任务后使用可培养、活性和分子方法重复采样。这样，即使污染无法完全避免，科学证据仍有机会被正确解释。</p>
+      </div>
+      <div class="closing-backmatter">
+        <div class="references compact-ref">
+          <h3>核心参考</h3>
+          <p><b>[1]</b> Saxena P, Bertone S, Graham HV, et al. Potential survivable niches for microbial life on the lunar south pole. <i>Science Advances</i>. 2026;12(34):eaec0811. DOI: 10.1126/sciadv.aec0811.</p>
+          <p><b>[2]</b> Shekhtman L. Human-Related Microbes May Survive Moon’s South Pole, NASA Finds. NASA Science. 19 Aug 2026.</p>
+          <p><b>[3]</b> NASA. Challenging Conditions at the Lunar South Pole. 2026.</p>
+          <p><b>[4]</b> NASA/GSFC/ASU. South Pole Illumination Map, PIA13720.</p>
+          <p><b>[5]</b> NASA Office of Planetary Protection. A Quick Guide to Planetary Protection on the Moon. 2026.</p>
+        </div>
+        <div class="terms"><b>术语</b><span><i>PSR</i> 永久阴影区</span><span><i>LRO</i> 月球勘测轨道器</span><span><i>Forward contamination</i> 前向污染</span><span><i>Cryptobiotic state</i> 隐生状态</span></div>
+      </div>
+      <footer class="footer inverse"><span>非 NASA 或 Science Advances 官方中文出版物</span><span>26</span></footer>
+    </section>
+  </main>
+</body>
+</html>

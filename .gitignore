@@ -1,0 +1,6 @@
+.DS_Store
+**/.DS_Store
+
+# Generated report artifacts belong in the user's project, not in this Skill repository.
+output/
+review/

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Quiet Signal Design"
+  short_description: "Apply or audit the Quiet Signal core visual language"
+  brand_color: "#7C3AED"
+  default_prompt: "Use $quiet-signal-design to apply the approved Quiet Signal visual language to this defined design task."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Quiet Signal Reports"
+  short_description: "Create source-backed Quiet Signal long-form PDF reports"
+  brand_color: "#7C3AED"
+  default_prompt: "Use $quiet-signal-reports to create this source-backed A4 long-form report as editable HTML/CSS, PDF, and rendered review pages."
+policy:
+  allow_implicit_invocation: true

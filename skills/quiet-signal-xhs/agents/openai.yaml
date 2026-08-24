@@ -1,0 +1,5 @@
+interface:
+  display_name: "Quiet Signal 小红书"
+  short_description: "把文章或文字制作成 Quiet Signal 小红书图文"
+  brand_color: "#7C3AED"
+  default_prompt: "Use $quiet-signal-xhs to turn this text or article into a polished 3:4 Xiaohongshu image-card series."
