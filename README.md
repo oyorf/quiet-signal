@@ -68,18 +68,18 @@ npx skills add oyorf/quiet-signal \
 ```
 
 ```text
-使用 quiet-signal-design Skill，帮我设计一款个人知识管理 App。
-需要包含首页、内容详情页和搜索页，保留我提供的文案与功能结构，
-应用 Quiet Signal 视觉语言，输出完整界面和可编辑源文件。
+使用 quiet-signal-design Skill，帮我设计一款个人任务与知识管理 App。
+需要包含“今天”“知识”“本周回顾”三个核心页面，清楚呈现任务、笔记和每周数据，
+应用 Quiet Signal 视觉语言，输出完整的移动端界面和可编辑源文件。
 ```
 
 为了得到稳定结果，请同时提供：设计对象与目标、必须保留的内容、必要结构或功能、尺寸与技术限制，以及期望的交付格式。基座只定义“如何看起来”，不会替用户发明内容策略、产品功能或媒介规格。
 
 ### 示例
 
-下面的开源发布海报由基座视觉语言组织：中性表面建立主体，紫色只承担识别与关系信号，内容通过层级、细线与空间形成一条明确阅读轴。
+下面的个人任务与知识管理 App 由基座视觉语言组织：三个核心页面分别承载当日行动、知识检索与每周回顾，紫色只用于当前状态和关键数据，界面通过层级、细线与空间建立清晰阅读路径。
 
-![Quiet Signal 基座设计示例](docs/assets/quiet-signal-open-source-poster.png)
+![Quiet Signal 个人任务与知识管理 App 设计示例](docs/assets/quiet-signal-app-example.png)
 
 核心规范见 [`skills/quiet-signal-design/references/SPEC.md`](skills/quiet-signal-design/references/SPEC.md)。
 
